@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="brandAddContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1364.0" style="-fx-background-color: rgba(0,0,0,0.8);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBrandFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="286.0" prefWidth="538.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="318.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/fashion-background.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtBrandID" editable="false" focusTraversable="false" layoutX="18.0" layoutY="24.0" prefHeight="25.0" prefWidth="116.0" promptText="Brand ID">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtName" focusTraversable="false" layoutX="160.0" layoutY="24.0" prefHeight="25.0" prefWidth="179.0" promptText="Brand Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtDesc" focusTraversable="false" layoutX="18.0" layoutY="71.0" prefHeight="25.0" prefWidth="320.0" promptText="Description">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                  <Button focusTraversable="false" layoutX="405.0" layoutY="72.0" mnemonicParsing="false" onAction="#addBrandOnAction" prefHeight="21.0" prefWidth="103.0" style="-fx-background-color: #3A99A9;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#a89696" />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icon%20(7).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TableView fx:id="tblBrand" layoutX="17.0" layoutY="123.0" prefHeight="163.0" prefWidth="501.0" stylesheets="@../styles/style.css">
+                     <columns>
+                        <TableColumn prefWidth="89.0" text="ID" />
+                        <TableColumn prefWidth="112.0" text="NAME" />
+                        <TableColumn prefWidth="180.0" text="DESCRIPTION" />
+                        <TableColumn prefWidth="115.0" text="EDIT" />
+                     </columns>
+                  </TableView>
+                  <Button focusTraversable="false" layoutX="407.0" layoutY="33.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #7B7B7B;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#a89696" />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icon2%20(33).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Separator layoutX="389.0" layoutY="26.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="4.0" />
+                  <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="516.0" layoutY="1.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/icon2%20(32).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

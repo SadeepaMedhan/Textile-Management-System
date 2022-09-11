@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="productContext" alignment="CENTER_LEFT" prefHeight="133.0" prefWidth="800.0" spacing="5.0" styleClass="hBox" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Product_OrderReportsFormController">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="137.0" fitWidth="103.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/product_images/cld_black_2.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="148.0" spacing="5.0">
+         <children>
+            <Label fx:id="lblName" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="100.0" text="Collared Linen Dress">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="44.0" text="Size   : " />
+                  <Label fx:id="lblSize" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="90.0" text="S" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="46.0">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" prefHeight="21.0" prefWidth="44.0" text="Color : " />
+                  <Label fx:id="lblColor" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="90.0" text="Black" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" prefHeight="21.0" prefWidth="44.0" text="Brand : " />
+                  <Label fx:id="lblBrand" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="90.0" text="Abc" />
+               </children>
+            </HBox>
+            <Label fx:id="lblCategory" layoutX="10.0" layoutY="116.0" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="100.0" text="Casual Wear, Women" />
+         </children>
+      </VBox>
+      <Label fx:id="lblUnitPrice" alignment="CENTER" layoutX="373.0" layoutY="72.0" prefHeight="26.0" prefWidth="90.0" text="1200.00">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="18.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="lblQty" alignment="CENTER" layoutX="313.0" layoutY="74.0" prefHeight="26.0" prefWidth="90.0" text="2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubTotal" alignment="CENTER" layoutX="521.0" layoutY="72.0" prefHeight="26.0" prefWidth="90.0" text="1200.00">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisc" alignment="CENTER" layoutX="503.0" layoutY="74.0" prefHeight="26.0" prefWidth="90.0" text="10%">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalPrice" alignment="CENTER_RIGHT" layoutX="587.0" layoutY="74.0" prefHeight="26.0" prefWidth="94.0" text="1200.00">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" top="2.0" />
+   </padding>
+</HBox>

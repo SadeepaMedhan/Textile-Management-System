@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="manageReturnsContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1366.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageReturnsProductFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #848484; -fx-border-width: 2; -fx-background-color: white;" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </BorderPane.margin>
+               <children>
+                  <AnchorPane prefHeight="30.0" prefWidth="1233.0" style="-fx-background-color: #848484;">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="177.0" text="Manage Returns" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="626.0" prefWidth="1233.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="86.0" prefHeight="338.0" prefWidth="1233.0" spacing="10.0">
+                           <children>
+                              <VBox prefHeight="338.0" prefWidth="833.0">
+                                 <children>
+                                    <AnchorPane prefHeight="30.0" prefWidth="820.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="32.0" prefWidth="196.0" text=" Product" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="253.0" prefHeight="32.0" prefWidth="89.0" text=" Unit Price" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="365.0" prefHeight="32.0" prefWidth="78.0" text="Qty" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="685.0" prefHeight="32.0" prefWidth="91.0" text="Total Price" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="467.0" prefHeight="32.0" prefWidth="91.0" text="Sub Total" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="575.0" prefHeight="32.0" prefWidth="91.0" text="Discount" textFill="#2f2121">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ScrollPane prefHeight="305.0" prefWidth="842.0">
+                                       <content>
+                                          <VBox fx:id="allProductsContext" prefHeight="333.0" prefWidth="816.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="338.0" prefWidth="339.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="299.0" text="Order Information -">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Separator prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <HBox>
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Order ID ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOID" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="52.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Order Date ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblODate" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="80.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Order Time ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOTime" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="108.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Total Products">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOProductQty" prefHeight="28.0" prefWidth="186.0" text="0">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="136.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Status">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOState" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="164.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Total Price">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOTotal" prefHeight="28.0" prefWidth="186.0" text="0.00">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="248.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Invoice No">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOInvoiceNo" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <Separator layoutX="16.0" layoutY="44.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <HBox layoutX="11.0" layoutY="192.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Customer">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOCusNAme" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="11.0" layoutY="220.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="102.0" text="Contact">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblOCusContact" prefHeight="28.0" prefWidth="186.0" text="-">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow color="#b9abab" />
+                                 </effect>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="txtInvoiceNo" focusTraversable="false" layoutX="34.0" layoutY="25.0" onAction="#searchInvoiceOnAction" onKeyReleased="#txtField_KeyReleased" prefHeight="35.0" prefWidth="200.0" promptText="Invoice No">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtProductID" focusTraversable="false" layoutX="290.0" layoutY="25.0" onAction="#searchProductOnAction" onKeyReleased="#txtField_KeyReleased" prefHeight="35.0" prefWidth="200.0" promptText="Product No">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </TextField>
+                        <VBox layoutX="26.0" layoutY="437.0" prefHeight="174.0" prefWidth="834.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="299.0" text="Receipt Information -">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Separator prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </Separator>
+                              <HBox prefHeight="126.0" prefWidth="832.0" spacing="5.0">
+                                 <children>
+                                    <VBox prefHeight="126.0" prefWidth="295.0">
+                                       <children>
+                                          <HBox layoutX="10.0" layoutY="10.0">
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="102.0" text="Recipt No">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblReceiptNo" prefHeight="28.0" prefWidth="186.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="102.0" text="Order ID ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblROrderID" prefHeight="28.0" prefWidth="186.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="102.0" text="Order Date ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblRODate" prefHeight="28.0" prefWidth="186.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="102.0" text="Invoice No">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblROInvoiceNo" prefHeight="28.0" prefWidth="186.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                    <VBox prefHeight="126.0" prefWidth="523.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="131.0" text="Return Products No">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblReturnProductNo" prefHeight="28.0" prefWidth="292.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="131.0" text="Description">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtDescription" focusTraversable="false" onKeyReleased="#txtField_KeyReleased" prefHeight="25.0" prefWidth="293.0" text="Size varies" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="132.0" text="Return Date ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblReturnDate" prefHeight="28.0" prefWidth="294.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="28.0" prefWidth="133.0" text="Amount">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="18.0" text=": ">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblAmount" prefHeight="28.0" prefWidth="293.0" text="-">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <effect>
+                              <DropShadow color="#c6b9b9" />
+                           </effect>
+                        </VBox>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="874.0" layoutY="494.0" onAction="#cancelOnAction" prefHeight="41.0" prefWidth="176.0" style="-fx-background-color: #848484;" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/icon2%20(33).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnConfirm" buttonType="RAISED" focusTraversable="false" layoutX="872.0" layoutY="551.0" onAction="#confirmReturnOnAction" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #7E308E;" text="Confirm Return" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/returncart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Button fx:id="btnReceiptPrint" layoutX="1087.0" layoutY="525.0" mnemonicParsing="false" onAction="#printReceiptOnAction" prefHeight="67.0" prefWidth="112.0" style="-fx-background-color: #27B85C;">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="40.0" prefWidth="79.0">
+                                 <children>
+                                    <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/printer.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Print Recipt" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="645.0" prefWidth="73.0" spacing="20.0" style="-fx-background-color: #002F65;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/aasd.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="28.0" layoutY="164.0" onMouseClicked="#showAllOrdersOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/icons8-shopping-cart-60.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="28.0" layoutY="221.0" onMouseClicked="#openMarkAttendance" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/icon%20(11).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="22.0" layoutY="131.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#logOutOnAction" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../assets/icon/exit.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="400.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow height="0.0" radius="4.75" />
+               </effect>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="dashBoardContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1366.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <left>
+            <AnchorPane prefHeight="656.0" prefWidth="190.0" style="-fx-background-color: #002F65;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-1.0" layoutY="69.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="587.0" prefWidth="192.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#openSummaryOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon2%20(29).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Summary" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="131.0" mnemonicParsing="false" onAction="#openIncomeReportsOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(3).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Income Reports" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#openSalaryReportsOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(29).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Salary Reports" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="10.0" layoutY="165.0" prefHeight="5.0" prefWidth="158.0" />
+                        <Button layoutX="10.0" layoutY="251.0" mnemonicParsing="false" onAction="#openOrderReportsOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon2%20(27).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Order Details" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="349.0" mnemonicParsing="false" onAction="#openReturnOrdersOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/returncart.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Return Products" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#openManageProductOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(10).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Manage Products" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="5.0" prefWidth="158.0" />
+                        <Button layoutX="10.0" layoutY="376.0" mnemonicParsing="false" onAction="#openCashierOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(20).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Cashier Details" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#openEmployeeDetailsOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(14).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Employee Details" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="449.0" mnemonicParsing="false" onAction="#openCustomerDetailsOnAction" prefHeight="45.0" prefWidth="200.0" styleClass="button-one" stylesheets="@../styles/style.css" text="Button">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="183.0" spacing="15.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8-online-shopping-64.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Customers" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" maxWidth="1.7976931348623157E308" onAction="#logOutOnAction" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: #c0392b;" text="Button" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="183.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/exit.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="132.0" text="Log Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="100.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="73.0" layoutY="38.0" prefHeight="17.0" prefWidth="105.0" text="Mr. name" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="63.0" prefHeight="5.0" prefWidth="158.0" />
+               </children>
+               <effect>
+                  <DropShadow height="35.58" radius="21.799999999999997" spread="0.36" width="53.62" />
+               </effect></AnchorPane>
+         </left>
+         <top>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1360.0" spacing="250.0" style="-fx-background-color: #002F65;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="420.0" text="Welcome, Manager" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTime" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="300.0" text="06:17:42" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="935.0" layoutY="15.0" prefHeight="25.0" prefWidth="420.0" text="2021-09-05" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow color="#92a8ff" height="10.5" radius="2.125" spread="0.42" width="0.0" />
+               </effect>
+            </HBox>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="18.0" prefWidth="1360.0" style="-fx-background-color: black;" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Label layoutX="16.0" layoutY="1.0" text="Version - 1.0.0" textFill="#aba2a2" />
+                  <Label layoutX="119.0" layoutY="1.0" prefHeight="15.0" prefWidth="109.0" text="© 2021 Google LLC" textFill="#aba2a2" wrapText="true" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="2.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="backContext" />
+                  <VBox fx:id="summaryContext" alignment="TOP_CENTER" prefHeight="650.0" prefWidth="1150.0" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="173.0" prefWidth="1120.0" spacing="20.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+                           <children>
+                              <AnchorPane prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: #34ace0;">
+                                 <children>
+                                    <AnchorPane layoutY="96.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #227093;">
+                                       <children>
+                                          <Label layoutX="116.0" layoutY="10.0" onMouseClicked="#openProductDetails" prefHeight="17.0" prefWidth="77.0" styleClass="label-link" stylesheets="@../styles/style.css" text="More info -&gt;" textFill="WHITE">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="lblProductCount" alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="145.0" text="127" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="2.0" layoutY="58.0" prefHeight="37.0" prefWidth="168.0" text="Total Product" textFill="#02082f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView blendMode="COLOR_DODGE" fitHeight="89.0" fitWidth="86.0" layoutX="107.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8-cart-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" color="#656060" height="41.52" radius="19.5775" width="38.79" />
+                                 </effect>
+                              </AnchorPane>
+                              <AnchorPane layoutX="492.0" layoutY="10.0" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: #9d3cb1;">
+                                 <children>
+                                    <AnchorPane layoutY="96.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #561f61;">
+                                       <children>
+                                          <Label layoutX="116.0" layoutY="10.0" prefHeight="17.0" prefWidth="77.0" styleClass="label-link" stylesheets="@../styles/style.css" text="More info -&gt;" textFill="#f5f5f5">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="lblMostMoveProduct" layoutX="2.0" layoutY="6.0" prefHeight="65.0" prefWidth="186.0" text="I-001" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label layoutX="2.0" layoutY="58.0" prefHeight="37.0" prefWidth="168.0" text="Most Movable Item" textFill="#02082f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView blendMode="COLOR_DODGE" fitHeight="60.0" fitWidth="86.0" layoutX="130.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8-favorite-cart-80.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" color="#656060" height="41.52" radius="19.5775" width="38.79" />
+                                 </effect>
+                              </AnchorPane>
+                              <AnchorPane layoutX="598.0" layoutY="10.0" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: #ffb142;">
+                                 <children>
+                                    <AnchorPane layoutY="96.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #cc8e35;">
+                                       <children>
+                                          <Label layoutX="116.0" layoutY="10.0" onMouseClicked="#openCustomerDetails" prefHeight="17.0" prefWidth="77.0" styleClass="label-link" stylesheets="@../styles/style.css" text="More info -&gt;" textFill="#f5f5f5">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="lblCusCount" alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="145.0" text="5468" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="2.0" layoutY="58.0" prefHeight="37.0" prefWidth="168.0" text="Customers" textFill="#02082f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView blendMode="OVERLAY" fitHeight="60.0" fitWidth="86.0" layoutX="130.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/customer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" color="#656060" height="41.52" radius="19.5775" width="38.79" />
+                                 </effect>
+                              </AnchorPane>
+                              <AnchorPane layoutX="703.0" layoutY="10.0" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: #33d9b2;">
+                                 <children>
+                                    <AnchorPane layoutY="96.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #218c74;">
+                                       <children>
+                                          <Label layoutX="116.0" layoutY="10.0" onMouseClicked="#openOrderDetails" prefHeight="17.0" prefWidth="77.0" styleClass="label-link" stylesheets="@../styles/style.css" text="More info -&gt;" textFill="#f5f5f5">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="lblOrderCount" alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="145.0" text="6538" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="2.0" layoutY="58.0" prefHeight="37.0" prefWidth="168.0" text="Orders" textFill="#02082f">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView blendMode="COLOR_DODGE" fitHeight="60.0" fitWidth="86.0" layoutX="130.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8-shopping-cart-60.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" color="#656060" height="41.52" radius="19.5775" width="38.79" />
+                                 </effect>
+                              </AnchorPane>
+                              <AnchorPane layoutX="809.0" layoutY="10.0" prefHeight="80.0" prefWidth="196.0" style="-fx-background-color: #706fd3;">
+                                 <children>
+                                    <AnchorPane layoutY="96.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: #474787;">
+                                       <children>
+                                          <Label layoutX="116.0" layoutY="10.0" onMouseClicked="#openIncomeDetails" prefHeight="17.0" prefWidth="77.0" styleClass="label-link" stylesheets="@../styles/style.css" text="More info -&gt;" textFill="#f5f5f5">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="lblTotRevenue" alignment="CENTER" layoutY="19.0" prefHeight="37.0" prefWidth="145.0" text="Rs.44485.65" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="2.0" layoutY="58.0" prefHeight="37.0" prefWidth="168.0" text="Revenue" textFill="#020517">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView blendMode="OVERLAY" fitHeight="60.0" fitWidth="86.0" layoutX="130.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/income%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow blurType="ONE_PASS_BOX" color="#656060" height="41.52" radius="19.5775" width="38.79" />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <AnchorPane prefHeight="412.0" prefWidth="1102.0" style="-fx-background-color: white; -fx-border-color: #7E308E; -fx-border-width: 2;">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" top="25.0" />
+                           </VBox.margin>
+                           <children>
+                              <TableView fx:id="tblSalesProduct" layoutX="3.0" layoutY="101.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="275.0" prefWidth="1101.0" styleClass="order-table-view" stylesheets="@../styles/style.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0">
+                                 <columns>
+                                    <TableColumn fx:id="colID" prefWidth="119.0" style="-fx-alignment: center" text="Product No" />
+                                    <TableColumn fx:id="colName" prefWidth="234.0" style="-fx-alignment: center-left" text="Name" />
+                                    <TableColumn fx:id="colCategory" prefWidth="162.0" style="-fx-alignment: center-left" text="Category" />
+                                    <TableColumn fx:id="colUnitPrice" prefWidth="120.0" style="-fx-alignment: center-right" text="Unit Price" />
+                                    <TableColumn fx:id="colQty" prefWidth="136.0" style="-fx-alignment: center" text="Sales Qty" />
+                                    <TableColumn fx:id="colDiscount" prefWidth="148.0" style="-fx-alignment: center-right" text="Discount Price" />
+                                    <TableColumn fx:id="colTotal" prefWidth="162.0" style="-fx-alignment: center-right" text="Total Profit" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="txtSearch" focusTraversable="false" layoutX="337.0" layoutY="49.0" onKeyReleased="#searchProductKeyReleased" prefHeight="30.0" prefWidth="230.0" promptText="Search Product">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="1117.0" style="-fx-background-color: #7E308E;" text="Daily Sales Product Information" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <HBox layoutX="17.0" layoutY="377.0" prefHeight="27.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="62.0" text="Showing ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCountOfDailySales" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="30.0" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="62.0" text="entries">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <DatePicker fx:id="datePicker" focusTraversable="false" layoutX="75.0" layoutY="49.0" prefHeight="28.0" prefWidth="193.0" promptText="All Days" styleClass="datePicker" stylesheets="@../styles/style.css" />
+                              <HBox layoutX="888.0" layoutY="377.0" prefHeight="27.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="109.0" text="Total income : ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotalIncome" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="83.0" text="25000.00">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXButton buttonType="RAISED" layoutX="988.0" layoutY="50.0" onAction="#refreshOnAction" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #BEC3C7;" text="Refresh">
+                                 <graphic>
+                                    <ImageView blendMode="DIFFERENCE" fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icon%20(5).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

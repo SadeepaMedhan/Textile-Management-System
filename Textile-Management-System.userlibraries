@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="mysql-connector-java-8.0.25">
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/mysql-connector-java-8.0.25.jar" />
+  </library>
+  <library name="jfoenix-8.0.8">
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jfoenix-8.0.8.jar" />
+  </library>
+  <library name="jasperreports-6.17.0">
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jasperreports-6.17.0.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/bcprov-jdk15on-1.64.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/itext-2.1.7.js8.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/castor-core-1.4.1.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-lang3-3.4.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-collections4-4.2.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-logging-1.1.1.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jackson-core-2.12.2.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/ecj-3.21.0.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jcommon-1.0.23.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jackson-annotations-2.12.2.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-digester-2.1.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-beanutils-1.9.4.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jfreechart-1.0.19.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/commons-collections-3.2.2.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/javax.inject-1.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/castor-xml-1.4.1.jar" />
+    <archive path="D:/GDSE/UI Projects/JDBC/Textile-Management-System/lib/jackson-databind-2.12.2.jar" />
+  </library>
+</eclipse-userlibraries>
+

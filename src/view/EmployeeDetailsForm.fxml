@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="employeeContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDetailsFormController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="1160.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="1120.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="146.0" text="Employee Details">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="10.0" prefWidth="546.0" />
+                  <TextField fx:id="txtSearchEmp" focusTraversable="false" onKeyReleased="#search_KeyReleased" prefHeight="30.0" prefWidth="205.0" promptText="Search here..">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="26.0" prefWidth="129.0" text="No of Employee ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCount" layoutX="586.0" layoutY="16.0" prefHeight="26.0" prefWidth="41.0" text="00">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="552.0" prefWidth="1060.0" style="-fx-background-color: white; -fx-border-color: #BFBFBF;">
+               <children>
+                  <JFXTextField fx:id="txtEmpID" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="27.0" layoutY="24.0" prefHeight="29.0" prefWidth="118.0" promptText="Employee ID" unFocusColor="BLACK">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtName" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="177.0" layoutY="24.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="200.0" promptText="Name" unFocusColor="BLACK">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtContact" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="247.0" layoutY="75.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="176.0" promptText="Contact" unFocusColor="BLACK">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtAddress" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="407.0" layoutY="24.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="200.0" promptText="Address" unFocusColor="BLACK">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtNIC" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="27.0" layoutY="75.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="176.0" promptText="NIC" unFocusColor="BLACK">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="cmbStatus" focusColor="#192bae" focusTraversable="false" labelFloat="true" layoutX="462.0" layoutY="76.0" prefHeight="28.0" prefWidth="145.0" promptText="Status" unFocusColor="#0d0d0d" />
+                  <JFXButton fx:id="btnAddUpdate" buttonType="RAISED" focusTraversable="false" layoutX="902.0" layoutY="67.0" onAction="#addOnAction" prefHeight="37.0" prefWidth="145.0" style="-fx-background-color: #7E308E;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icon2%20(14).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="724.0" layoutY="67.0" onAction="#clearOnAction" prefHeight="35.0" prefWidth="145.0" style="-fx-background-color: #7B7B7B;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icon2%20(13).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <TableView fx:id="tblEmpDetail" layoutX="3.0" layoutY="145.0" prefHeight="412.0" prefWidth="1103.0" styleClass="order-table-view" stylesheets="@../styles/style.css">
+                     <columns>
+                        <TableColumn fx:id="colEmpID" prefWidth="117.0" style="-fx-alignment: center" text="Employee ID" />
+                        <TableColumn fx:id="colName" prefWidth="204.0" style="-fx-alignment: center-left" text="Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="174.0" style="-fx-alignment: center-left" text="Address" />
+                        <TableColumn fx:id="colNIC" prefWidth="139.0" style="-fx-alignment: center" text="NIC" />
+                        <TableColumn fx:id="colContact" prefWidth="137.0" style="-fx-alignment: center" text="Contact" />
+                        <TableColumn fx:id="colStatus" prefWidth="104.0" style="-fx-alignment: center" text="Status" />
+                        <TableColumn fx:id="colUpdate" prefWidth="114.0" style="-fx-alignment: center" text="Update" />
+                        <TableColumn fx:id="colRemove" prefWidth="107.0" style="-fx-alignment: center" text="Remove" />
+                     </columns>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
