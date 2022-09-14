@@ -15,7 +15,6 @@
       <root url="jar://$PROJECT_DIR$/lib/commons-digester-2.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jfreechart-1.0.19.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.inject-1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/castor-xml-1.4.1.jar!/" />

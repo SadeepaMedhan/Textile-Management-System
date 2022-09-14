@@ -70,7 +70,7 @@ public class DashBoardFormController {
         try {
             allSales = new OrderController().getAllSales();
             loadDailySales(allSales);
-            setSummary();
+            //setSummary();
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
